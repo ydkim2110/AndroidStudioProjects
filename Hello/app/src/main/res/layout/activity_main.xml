@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:background="#393c3d"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="HELLO APP"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:textSize="50dp" />
+    <EditText
+        android:id="@+id/input_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="id"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        />
+    <EditText
+        android:id="@+id/input_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="password"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="#e61a5f"
+        android:text="LOGIN"
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
+    <Button
+        android:id="@+id/join_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="JOIN"
+        android:textSize="20dp"
+        android:background="#84db65"
+        />
+</LinearLayout>

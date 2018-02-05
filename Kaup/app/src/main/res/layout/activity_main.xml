@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Kaup Program"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        />
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="이름"
+        />
+    <EditText
+        android:id="@+id/input_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="몸무게"
+        />
+    <EditText
+        android:id="@+id/input_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="키"
+        />
+    <Button
+        android:id="@+id/calc_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="계산하기"
+        />
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="결과: "
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_red_dark"
+        />
+</LinearLayout>
