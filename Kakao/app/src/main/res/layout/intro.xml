@@ -2,7 +2,7 @@
 <LinearLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#fff50d"
+    android:background="#ffeb00"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -12,12 +12,15 @@
         android:layout_marginTop="10dp"
         android:text="본인 휴대전화번호를 입력해주세요."/>
     <EditText
+        android:id="@+id/input_tel"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
-        android:background="@drawable/border"
-        android:hint="전화번호"/>
+        android:paddingLeft="10dp"
+        android:background="@drawable/border_light_orange"
+        android:text="010-3453-4435"/>
     <Button
+        android:id="@+id/next_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
