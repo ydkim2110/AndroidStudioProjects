@@ -41,11 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
                for(int i=0; i<6; i++) {
                     res += a[i]+" ";
-                   /*        if(i != 5) {
-                       res += a[i] + ", ";
-                   } else {
-                       res += a[i];
-                   }*/
+
                }
                result.setText("결과: "+res);
             }
