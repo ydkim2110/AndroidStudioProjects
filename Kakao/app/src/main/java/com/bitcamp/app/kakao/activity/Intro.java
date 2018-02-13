@@ -12,9 +12,10 @@ import android.widget.Toast;
 
 import com.bitcamp.app.kakao.R;
 
+import java.util.ArrayList;
+
 public class Intro extends AppCompatActivity {
     SQLiteHelper helper;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,12 +26,13 @@ public class Intro extends AppCompatActivity {
         findViewById(R.id.next_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "인증 받을 전화번호: "+String.valueOf(tel.getText()), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,
+                        "인증 받을 전화번호: "+tel.getText().toString(),
+                            Toast.LENGTH_SHORT).show();
                 helper = new SQLiteHelper(context);
                 startActivity(new Intent(context, Index.class));
             }
         });
-
     }
     static final String DATABASE_NAME = "kakao.db";
     static final String TABLE_MEMBER = "member";
@@ -43,10 +45,16 @@ public class Intro extends AppCompatActivity {
     static final String MEMBER_7 = "address";
     static class Member {
         String id, password, name, email, phoneNumber, profilePhoto, address;
+        public String toString() {
+            return id+","+password+","+name+","+email+","+phoneNumber+","+profilePhoto+","+address;
+        }
     }
-    static interface LoginService {
-        public void execute();
-    }
+
+    static interface LoginService { public void execute();}
+    static interface ListService { public ArrayList<?> execute();}
+    static interface DetailService { public Object execute();}
+    static interface DMLService { public void execute();}
+
     static abstract class QueryFactory {
         Context context;
         public QueryFactory(Context context) { // ALT + INSERT 생성자 바로 만들기
@@ -56,12 +64,10 @@ public class Intro extends AppCompatActivity {
     }
 
     static class SQLiteHelper extends SQLiteOpenHelper {
-
         public SQLiteHelper(Context context) {
             super(context, DATABASE_NAME, null, 1);
             this.getWritableDatabase();
         }
-
         @Override
         public void onCreate(SQLiteDatabase db) {
             db.execSQL(
@@ -81,19 +87,14 @@ public class Intro extends AppCompatActivity {
                                         " VALUES('%s', '%s', '%s', '%s', '%s', '%s');",
                                 TABLE_MEMBER, MEMBER_2, MEMBER_3,
                                 MEMBER_4, MEMBER_5, MEMBER_6, MEMBER_7,
-                                "1", "홍길동"+i, "hong"+i+"@gmail.com", "010-3453-443"+i, "default_profile",
+                                "1", "홍길동"+i, "hong"+i+"@gmail.com", "010-3453-443"+i, "profile_"+i,
                                 "서울 백범로 "+i+"길"));
             }
-
         }
-
-
-
         @Override
         public void onUpgrade(SQLiteDatabase db, int i, int i1) {
             db.execSQL("DROP TABLE IF EXISTS "+TABLE_MEMBER);
             onCreate(db);
         }
-
     }
 }

@@ -9,9 +9,9 @@
         android:layout_height="wrap_content"
         android:background="#301f31">
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/detail_name"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="홍길동의 프로필"
             android:textSize="20dp"
             android:textColor="@android:color/white"
             android:paddingTop="10dp"
@@ -21,7 +21,7 @@
             android:layout_weight="4" />
         <Button
             android:id="@+id/update_btn"
-            android:layout_width="20dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="수정"
             android:textColor="@android:color/white"
@@ -29,13 +29,13 @@
             android:layout_weight="1"/>
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+   <ImageView
+        android:id="@+id/detail_profile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/circle_border"
-        android:text="사진" />
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,118 +43,144 @@
         android:orientation="vertical"
         android:paddingLeft="100dp"
         android:paddingRight="100dp">
-        <EditText
+        <TextView
+            android:id="@+id/phone_number"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:background="@drawable/border_grey_datail">
-
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/name"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_weight="10"
             android:paddingLeft="10dp"
-            android:text="훈이 아빠"
             android:textSize="15dp"
             android:textStyle="bold" />
-        <Button
-            android:layout_width="30dp"
+        <TextView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
             android:text=">"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:background="#FFFFFFFF"/>
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_grey_datail">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="10"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text=">"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_grey_datail">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="10"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text=">"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_grey_datail">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="10"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text=">"
+            android:textSize="15dp"
+            android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:orientation="horizontal"
-        android:background="@drawable/border_grey_datail">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:layout_gravity="center_vertical"
-            android:paddingLeft="10dp"
-            android:text="카카오 계정"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+        android:background="#301f31">
         <Button
-            android:layout_width="10dp"
+            android:id="@+id/call_btn"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text=">"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:background="#FFFFFFFF"/>
+            android:text="call"
+            android:textColor="@android:color/white"
+            android:background="#301f31"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/email_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="email"
+            android:textColor="@android:color/white"
+            android:background="#301f31"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/album_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="album"
+            android:textColor="@android:color/white"
+            android:background="#301f31"
+            android:layout_weight="1"/>
+
     </LinearLayout>
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal"
-        android:stretchColumns="2"
-        android:background="@drawable/border_grey_datail">
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:layout_gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="카카오톡 아이디 만들기"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-            <Button
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=">"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:background="#FFFFFFFF"/>
-        </TableRow>
-
-    </TableLayout>
-
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal"
-        android:stretchColumns="2"
-        android:background="@drawable/border_grey_datail">
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:layout_gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:text="카카오톡"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                android:layout_span="1"/>
-            <Button
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=">"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:background="#FFFFFFFF"/>
-
-        </TableRow>
-
-    </TableLayout>
 
 </LinearLayout>

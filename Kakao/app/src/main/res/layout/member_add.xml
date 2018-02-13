@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#301f31">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="친구 추가"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:background="#301f31"
+            android:layout_weight="4" />
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="저장"
+            android:textColor="@android:color/white"
+            android:background="#301f31"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="취소"
+            android:textColor="@android:color/white"
+            android:background="#301f31"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="PHONE : "
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/add_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="NAME : "
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/add_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="EMAIL : "
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/add_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="ADDRESS : "
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/add_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

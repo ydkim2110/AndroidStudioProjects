@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import com.bitcamp.app.kakao.activity.Intro.*;
 import com.bitcamp.app.kakao.R;
 
 public class Index extends AppCompatActivity {
@@ -25,8 +25,7 @@ public class Index extends AppCompatActivity {
         findViewById(R.id.login_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Intro.LoginService() {
-
+                new LoginService() {
                     @Override
                     public void execute() {
                         if(exist.execute(String.valueOf(id.getText()),
@@ -39,17 +38,16 @@ public class Index extends AppCompatActivity {
                             password.setText("");
                         }
                     }
-
                 }.execute();
             }
         });
     }
 
-    private class LoginQuery extends Intro.QueryFactory {
+    private class LoginQuery extends QueryFactory {
         SQLiteOpenHelper helper;
         public LoginQuery(Context context) {
             super(context);
-            helper = new Intro.SQLiteHelper(context);
+            helper = new SQLiteHelper(context);
         }
 
         @Override
