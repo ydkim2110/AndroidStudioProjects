@@ -83,6 +83,19 @@ public class MemberDetail extends AppCompatActivity {
                 startActivity(new Intent(context, Album.class));
             }
         });
+        findViewById(R.id.msg_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(context, Message.class));
+            }
+        });
+        findViewById(R.id.map_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                member.address = "37.5597680, 126.9423080";
+                startActivity(new Intent(context, Maps.class).putExtra("address", member.address));
+            }
+        });
     }
     public static Bitmap getRoundedRectBitmap(Bitmap bitmap, int pixels) {
         Bitmap result = null;
